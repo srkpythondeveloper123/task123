@@ -1,0 +1,31 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="menu-bar">
+<ul>
+    <li ><a href="login">login</a></li>
+    <li ><a href="#">department</a>
+    <div class="sub-menu-1">
+        <ul>
+         <li><a href="https://en.wikipedia.org/wiki/Science">science</a></li>
+         <li><a href="https://en.wikipedia.org/wiki/commerce">commerce</a></li>
+         <li><a href="https://en.wikipedia.org/wiki/arts">arts</a></li>
+         <li><a href="https://en.wikipedia.org/wiki/politics">politics</a></li>
+         <li><a href="https://en.wikipedia.org/wiki/sports">sports</a></li>
+        </ul>
+    </div>
+    </li>
+    <li><a href="register">register</a></li>
+</ul>
+    </div>
+{% block content %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body>
+<div class="reg-container" style="font-family:arial;
+    font-size:24px;
+    margin:100px;
+    width:350px;
+    height:200px;
+    position:relative;
+">
+    <div class="reg-menu" style="height:50px;
+                    width:50px;
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    margin:-25px 0 0 -25px;">
+        <form action="register" method="post">
+                {% csrf_token %}
+             <input type="text" name="username" placeholder="enter your username"><br>
+                <input type="password" name="password" placeholder="enter your password"><br>
+                <input type="password" name="password1" placeholder="confirm password"><br>
+                <button><input type="submit"></button>
+         </form>
+        {% for msg in messages %}
+            {{msg}}
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>
+{% endblock %}
